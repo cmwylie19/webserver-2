@@ -18,3 +18,10 @@ docker login quay.io
 ```
 docker push quay.io/cmwylie19/api-service
 ```
+
+## Test
+```
+cargo test
+```
+
+DOCKER_ACCESS_TOKEN=1e3cf25c-9404-4b8c-baf4-ac5608d34b5a
