@@ -46,7 +46,7 @@ metadata:
   namespace: website
 spec:
   progressDeadlineSeconds: 600
-  replicas: 1
+  replicas: 4
   revisionHistoryLimit: 10
   selector:
     matchLabels:
@@ -76,3 +76,24 @@ spec:
       schedulerName: default-scheduler
       securityContext: {}
       terminationGracePeriodSeconds: 30
+---
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  name: api-server-pipeline
+  namespace: website
+spec:
+  strategy:
+    jenkinsPipelineStrategy:
+      jenkinsfile: |-
+        node('agent') {
+          stage 'build'
+          openshiftBuild(buildConfig: 'api-server-pipeline', showBuildLogs: 'true')
+          stage 'deploy'
+          openshiftDeploy(deployment: 'api-server')
+        }
+    type: JenkinsPipeline
+  triggers:
+    - github:
+        secret: QdBuCPedHi-u2kD4WLRR
+      type: GitHub
