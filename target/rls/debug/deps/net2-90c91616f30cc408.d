@@ -1,0 +1,13 @@
+/Users/cmwylie19/repositories/Chat2/rust-service/target/rls/debug/deps/net2-90c91616f30cc408.rmeta: /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/net2-0.2.35/src/lib.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/net2-0.2.35/src/tcp.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/net2-0.2.35/src/udp.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/net2-0.2.35/src/socket.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/net2-0.2.35/src/ext.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/net2-0.2.35/src/utils.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/net2-0.2.35/src/sys/unix/mod.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/net2-0.2.35/src/sys/unix/impls.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/net2-0.2.35/src/unix.rs
+
+/Users/cmwylie19/repositories/Chat2/rust-service/target/rls/debug/deps/net2-90c91616f30cc408.d: /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/net2-0.2.35/src/lib.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/net2-0.2.35/src/tcp.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/net2-0.2.35/src/udp.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/net2-0.2.35/src/socket.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/net2-0.2.35/src/ext.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/net2-0.2.35/src/utils.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/net2-0.2.35/src/sys/unix/mod.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/net2-0.2.35/src/sys/unix/impls.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/net2-0.2.35/src/unix.rs
+
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/net2-0.2.35/src/lib.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/net2-0.2.35/src/tcp.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/net2-0.2.35/src/udp.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/net2-0.2.35/src/socket.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/net2-0.2.35/src/ext.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/net2-0.2.35/src/utils.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/net2-0.2.35/src/sys/unix/mod.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/net2-0.2.35/src/sys/unix/impls.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/net2-0.2.35/src/unix.rs:

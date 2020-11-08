@@ -1,0 +1,2 @@
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/Users/cmwylie19/repositories/Chat2/rust-service/target/release/build/typenum-f8331ec0ec827f2d/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=/Users/cmwylie19/repositories/Chat2/rust-service/target/release/build/typenum-f8331ec0ec827f2d/out/op.rs

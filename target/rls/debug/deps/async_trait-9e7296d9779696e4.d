@@ -1,0 +1,11 @@
+/Users/cmwylie19/repositories/Chat2/rust-service/target/rls/debug/deps/libasync_trait-9e7296d9779696e4.dylib: /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/lib.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/args.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/expand.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/lifetime.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/parse.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/receiver.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/respan.rs
+
+/Users/cmwylie19/repositories/Chat2/rust-service/target/rls/debug/deps/async_trait-9e7296d9779696e4.d: /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/lib.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/args.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/expand.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/lifetime.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/parse.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/receiver.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/respan.rs
+
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/lib.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/args.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/expand.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/lifetime.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/parse.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/receiver.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/async-trait-0.1.41/src/respan.rs:

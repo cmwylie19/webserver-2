@@ -1,0 +1,14 @@
+/Users/cmwylie19/repositories/Chat2/rust-service/target/rls/debug/deps/awc-f78c193bf07c441e.rmeta: /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/awc-2.0.1/src/lib.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/awc-2.0.1/src/builder.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/awc-2.0.1/src/connect.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/awc-2.0.1/src/error.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/awc-2.0.1/src/frozen.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/awc-2.0.1/src/request.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/awc-2.0.1/src/response.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/awc-2.0.1/src/sender.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/awc-2.0.1/src/test.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/awc-2.0.1/src/ws.rs
+
+/Users/cmwylie19/repositories/Chat2/rust-service/target/rls/debug/deps/awc-f78c193bf07c441e.d: /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/awc-2.0.1/src/lib.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/awc-2.0.1/src/builder.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/awc-2.0.1/src/connect.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/awc-2.0.1/src/error.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/awc-2.0.1/src/frozen.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/awc-2.0.1/src/request.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/awc-2.0.1/src/response.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/awc-2.0.1/src/sender.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/awc-2.0.1/src/test.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/awc-2.0.1/src/ws.rs
+
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/awc-2.0.1/src/lib.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/awc-2.0.1/src/builder.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/awc-2.0.1/src/connect.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/awc-2.0.1/src/error.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/awc-2.0.1/src/frozen.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/awc-2.0.1/src/request.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/awc-2.0.1/src/response.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/awc-2.0.1/src/sender.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/awc-2.0.1/src/test.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/awc-2.0.1/src/ws.rs:

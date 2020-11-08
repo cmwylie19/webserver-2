@@ -1,0 +1,11 @@
+/Users/cmwylie19/repositories/Chat2/rust-service/target/rls/debug/deps/futures_task-d0a7c2871c0d5b31.rmeta: /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.7/src/lib.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.7/src/spawn.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.7/src/future_obj.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.7/src/noop_waker.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.7/src/arc_wake.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.7/src/waker.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.7/src/waker_ref.rs
+
+/Users/cmwylie19/repositories/Chat2/rust-service/target/rls/debug/deps/futures_task-d0a7c2871c0d5b31.d: /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.7/src/lib.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.7/src/spawn.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.7/src/future_obj.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.7/src/noop_waker.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.7/src/arc_wake.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.7/src/waker.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.7/src/waker_ref.rs
+
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.7/src/lib.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.7/src/spawn.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.7/src/future_obj.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.7/src/noop_waker.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.7/src/arc_wake.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.7/src/waker.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-task-0.3.7/src/waker_ref.rs:

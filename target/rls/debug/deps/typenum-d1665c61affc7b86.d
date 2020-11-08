@@ -1,0 +1,18 @@
+/Users/cmwylie19/repositories/Chat2/rust-service/target/rls/debug/deps/typenum-d1665c61affc7b86.rmeta: /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.12.0/src/lib.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.12.0/src/bit.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.12.0/src/int.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.12.0/src/marker_traits.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.12.0/src/operator_aliases.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.12.0/src/private.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.12.0/src/type_operators.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.12.0/src/uint.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.12.0/src/array.rs /Users/cmwylie19/repositories/Chat2/rust-service/target/rls/debug/build/typenum-ceeed62f11d3c17c/out/op.rs /Users/cmwylie19/repositories/Chat2/rust-service/target/rls/debug/build/typenum-ceeed62f11d3c17c/out/consts.rs
+
+/Users/cmwylie19/repositories/Chat2/rust-service/target/rls/debug/deps/typenum-d1665c61affc7b86.d: /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.12.0/src/lib.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.12.0/src/bit.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.12.0/src/int.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.12.0/src/marker_traits.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.12.0/src/operator_aliases.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.12.0/src/private.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.12.0/src/type_operators.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.12.0/src/uint.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.12.0/src/array.rs /Users/cmwylie19/repositories/Chat2/rust-service/target/rls/debug/build/typenum-ceeed62f11d3c17c/out/op.rs /Users/cmwylie19/repositories/Chat2/rust-service/target/rls/debug/build/typenum-ceeed62f11d3c17c/out/consts.rs
+
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.12.0/src/lib.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.12.0/src/bit.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.12.0/src/int.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.12.0/src/marker_traits.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.12.0/src/operator_aliases.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.12.0/src/private.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.12.0/src/type_operators.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.12.0/src/uint.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/typenum-1.12.0/src/array.rs:
+/Users/cmwylie19/repositories/Chat2/rust-service/target/rls/debug/build/typenum-ceeed62f11d3c17c/out/op.rs:
+/Users/cmwylie19/repositories/Chat2/rust-service/target/rls/debug/build/typenum-ceeed62f11d3c17c/out/consts.rs:
+
+# env-dep:TYPENUM_BUILD_CONSTS=/Users/cmwylie19/repositories/Chat2/rust-service/target/rls/debug/build/typenum-ceeed62f11d3c17c/out/consts.rs
+# env-dep:TYPENUM_BUILD_OP=/Users/cmwylie19/repositories/Chat2/rust-service/target/rls/debug/build/typenum-ceeed62f11d3c17c/out/op.rs

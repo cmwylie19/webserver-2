@@ -1,0 +1,10 @@
+/Users/cmwylie19/repositories/Chat2/rust-service/target/rls/debug/deps/futures_channel-327b963ac0846a64.rmeta: /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.7/src/lib.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.7/src/lock.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.7/src/mpsc/mod.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.7/src/mpsc/queue.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.7/src/mpsc/sink_impl.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.7/src/oneshot.rs
+
+/Users/cmwylie19/repositories/Chat2/rust-service/target/rls/debug/deps/futures_channel-327b963ac0846a64.d: /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.7/src/lib.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.7/src/lock.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.7/src/mpsc/mod.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.7/src/mpsc/queue.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.7/src/mpsc/sink_impl.rs /Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.7/src/oneshot.rs
+
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.7/src/lib.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.7/src/lock.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.7/src/mpsc/mod.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.7/src/mpsc/queue.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.7/src/mpsc/sink_impl.rs:
+/Users/casewylie/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-channel-0.3.7/src/oneshot.rs:
