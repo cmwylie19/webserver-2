@@ -147,7 +147,7 @@ spec:
   strategy:
     jenkinsPipelineStrategy:
       jenkinsfile: |-
-        node('agent') {
+        node('ose-jenkins-agent-nodejs') {
           stage 'build'
           openshiftBuild(buildConfig: 'api-server-docker', showBuildLogs: 'true')
           stage 'deploy'
