@@ -13,12 +13,12 @@ pipeline{
     //Note this stage is not necessary if the Jenkinsfile and the source code lives in the same branch of the same repository
     stage('Checkout Source Code') {
       steps {
-        echo "Checking out source code"
-            git (
-                branch: "master",
-               // credentialsId: "<NAMESPACE NAME>-<SECRET FOR BITBUCKET CREATED EARLIER>",
-                url: "https://github.com/cmwylie19/webserver-2"
-            )
+        // echo "Checking out source code"
+        //     git (
+        //         branch: "master",
+        //        // credentialsId: "<NAMESPACE NAME>-<SECRET FOR BITBUCKET CREATED EARLIER>",
+        //         url: "https://github.com/cmwylie19/webserver-2"
+        //     )
         echo "Checking out code completed"
       }
     }
