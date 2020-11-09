@@ -80,6 +80,31 @@ spec:
 apiVersion: build.openshift.io/v1
 kind: BuildConfig
 metadata:
+  labels:
+    app: api-server
+  name: api-server
+  namespace: website
+spec:
+  failedBuildsHistoryLimit: 5
+  nodeSelector: null
+  output:
+    to:
+      kind: ImageStreamTag
+      name: api-server:latest
+  postCommit: {}
+  resources: {}
+  runPolicy: Serial
+  source:
+    binary: {}
+    type: Binary
+  strategy:
+    dockerStrategy:
+      dockerfilePath: Dockerfile
+    type: Docker
+---
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
   name: api-server-pipeline
   namespace: website
 spec:
@@ -88,7 +113,7 @@ spec:
       jenkinsfile: |-
         node('agent') {
           stage 'build'
-          openshiftBuild(buildConfig: 'api-server-pipeline', showBuildLogs: 'true')
+          openshiftBuild(buildConfig: 'api-server-docker', showBuildLogs: 'true')
           stage 'deploy'
           openshiftDeploy(deployment: 'api-server')
         }
