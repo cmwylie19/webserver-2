@@ -1,3 +1,24 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  labels:
+    role: jenkins-slave
+  name: ose-jenkins-agent-nodejs
+  namespace: website
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations: null
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/openshift4/ose-jenkins-agent-nodejs
+    generation: 1
+    importPolicy: {}
+    name: latest
+    referencePolicy:
+      type: Source
+---
 apiVersion: v1
 kind: Service
 metadata:
@@ -118,6 +139,7 @@ kind: BuildConfig
 metadata:
   labels:
     app: api-server-docker
+    app.kubernetes.io/instance: development-buildconfigs
   name: api-server-docker
   namespace: website
 spec:
@@ -126,7 +148,7 @@ spec:
   output:
     to:
       kind: ImageStreamTag
-      name: api-server:latest
+      name: member:latest
   postCommit: {}
   resources: {}
   runPolicy: Serial
@@ -137,23 +159,60 @@ spec:
     dockerStrategy:
       dockerfilePath: Dockerfile
     type: Docker
----
+  successfulBuildsHistoryLimit: 5
+  triggers: []
+---  
 apiVersion: build.openshift.io/v1
 kind: BuildConfig
 metadata:
   name: api-server-pipeline
   namespace: website
 spec:
+  failedBuildsHistoryLimit: 5
+  nodeSelector: {}
+  output: {}
+  postCommit: {}
+  resources: {}
+  runPolicy: Serial
+  source:
+    git:
+      ref: master
+      uri: https://github.com/devsuperstar/cache-service.git
+    # sourceSecret:
+    #   name: bitbucket
+    type: Git
   strategy:
     jenkinsPipelineStrategy:
-      jenkinsfile: |-
-        node('ose-jenkins-agent-nodejs') {
-          stage 'build'
-          openshiftBuild(buildConfig: 'api-server-docker', showBuildLogs: 'true')
-          stage 'deploy'
-          openshiftDeploy(deployment: 'api-server')
-        }
+      env:
+      - name: AGENT_NAME
+        value: ose-jenkins-agent-nodejs
+      - name: BUILD_CONFIG_NAME
+        value: member-build
+      - name: ENV_TAG
+        value: dev
+      - name: TARGET_PROJECT
+        value: api-server-dev
+      - name: TARGET_PROJECT_IS
+        value: api-server
+      - name: TARGET_PROJECT_IS_TAG
+        value: latest
+      - name: QUAY_URL
+        value: quay.apps.ent-ocp4-np2-har.antmdc.internal.das
+      - name: QUAY_ORG
+        value: api-server
+      - name: QUAY_IMAGE_REPO
+        value: api-server
+      - name: CURRENT_IS
+        value: api-server
+      - name: CURRENT_IS_TAG
+        value: latest
+      - name: GIT_REPOSITORY_URL
+        value: https://github.com/devsuperstar/cache-service.git
+      - name: GIT_REPOSITORY_BRANCH
+        value: master
+      jenkinsfilePath: manifests/Jenkinsfile
     type: JenkinsPipeline
+  successfulBuildsHistoryLimit: 5
   triggers:
     - github:
         secret: QdBuCPedHi-u2kD4WLRR
