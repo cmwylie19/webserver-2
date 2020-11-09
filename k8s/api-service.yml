@@ -81,8 +81,8 @@ apiVersion: build.openshift.io/v1
 kind: BuildConfig
 metadata:
   labels:
-    app: api-server
-  name: api-server
+    app: api-server-docker
+  name: api-server-docker
   namespace: website
 spec:
   failedBuildsHistoryLimit: 5
