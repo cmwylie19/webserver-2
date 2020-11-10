@@ -44,7 +44,7 @@ spec:
         - name: JENKINS_UC_INSECURE
           value: "false"
         image: docker.io/cmwylie19/api-server
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         livenessProbe:
           failureThreshold: 2
           httpGet:
