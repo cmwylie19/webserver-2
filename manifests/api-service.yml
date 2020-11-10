@@ -1,23 +1,153 @@
-apiVersion: image.openshift.io/v1
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  labels:
+    app: api-server
+    template: jenkins-persistent-template
+  name: api-server
+  namespace: website
+spec:
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    name: api-server
+  strategy:
+    activeDeadlineSeconds: 21600
+    recreateParams:
+      timeoutSeconds: 600
+    resources: {}
+    type: Recreate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        name: api-server
+    spec:
+      containers:
+      - env:
+        - name: OPENSHIFT_ENABLE_OAUTH
+          value: "true"
+        - name: OPENSHIFT_ENABLE_REDIRECT_PROMPT
+          value: "true"
+        - name: DISABLE_ADMINISTRATIVE_MONITORS
+          value: "false"
+        - name: KUBERNETES_MASTER
+          value: https://kubernetes.default:443
+        - name: KUBERNETES_TRUST_CERTIFICATES
+          value: "true"
+        - name: JENKINS_SERVICE_NAME
+          value: jenkins
+        - name: JNLP_SERVICE_NAME
+          value: jenkins-jnlp
+        - name: ENABLE_FATAL_ERROR_LOG_FILE
+          value: "false"
+        - name: JENKINS_UC_INSECURE
+          value: "false"
+        image: docker.io/cmwylie19/api-server
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 2
+          httpGet:
+            path: /test
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 420
+          periodSeconds: 360
+          successThreshold: 1
+          timeoutSeconds: 240
+        name: api-server
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /test
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 3
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 240
+        resources:
+          limits:
+            memory: 1Gi
+        securityContext:
+          capabilities: {}
+          privileged: false
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        # volumeMounts:
+        # - mountPath: /var/lib/jenkins
+        #   name: jenkins-data
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      # serviceAccount: jenkins
+      # serviceAccountName: jenkins
+      terminationGracePeriodSeconds: 30
+      # volumes:
+      # - name: jenkins-data
+      #   persistentVolumeClaim:
+      #     claimName: jenkins
+  test: false
+  triggers: []
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: rust
+  name: rust
+  namespace: website
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      deployment: rust
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      annotations:
+        openshift.io/generated-by: OpenShiftNewApp
+      creationTimestamp: null
+      labels:
+        deployment: rust
+    spec:
+      containers:
+      - image: docker.io/cmwylie19/jenkins-slave-rust:latest
+        imagePullPolicy: IfNotPresent
+        name: rust
+        ports:
+        - containerPort: 8443
+          protocol: TCP
+        - containerPort: 53
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+---
+apiVersion: v1
 kind: ImageStream
 metadata:
   labels:
     role: jenkins-slave
-  name: ose-jenkins-agent-nodejs
-  namespace: website
+  name: rust
 spec:
-  lookupPolicy:
-    local: false
   tags:
-  - annotations: null
-    from:
+  - from:
       kind: DockerImage
-      name: registry.redhat.io/openshift4/ose-jenkins-agent-nodejs
-    generation: 1
-    importPolicy: {}
+      name: docker.io/outtherelabs/jenkins-slave-rust:latest
     name: latest
-    referencePolicy:
-      type: Source
 ---
 apiVersion: v1
 kind: Service
@@ -109,13 +239,13 @@ spec:
   output:
     to:
       kind: ImageStreamTag
-      name: "origin-jenkins-agent-rust:latest"
+      name: origin-jenkins-agent-rust:latest
   postCommit: {}
   resources: {}
   runPolicy: Serial
   source:
     dockerfile: >-
-      FROM
+      FROM ubuntu:latest
       registry.access.redhat.com/openshift3/jenkins-agent-maven-35-rhel7:latest
 
       USER root
@@ -148,7 +278,7 @@ spec:
   output:
     to:
       kind: ImageStreamTag
-      name: member:latest
+      name: api-server:latest
   postCommit: {}
   resources: {}
   runPolicy: Serial
@@ -179,18 +309,20 @@ spec:
   strategy:
     jenkinsPipelineStrategy:
       jenkinsfile: |-
-        // path of the template to use
-        def templatePath = 'cache-service-pipeline'
-        // name of the template that will be created
-        def templateName = 'cache-service-pipeline'
-        // NOTE, the "pipeline" directive/closure from the declarative pipeline syntax needs to include, or be nested outside,
-        // and "openshift" directive/closure from the OpenShift Client Plugin for Jenkins.  Otherwise, the declarative pipeline engine
-        // will not be fully engaged.
+        library identifier: "pipeline-library@master",
+        retriever: modernSCM(
+            [
+                $class: "GitSCMSource",
+                remote: "https://github.com/redhat-cop/pipeline-library.git"
+            ]   
+        )
+
+        def templatePath = 'manifests/api-service.yaml'
+        def templateName = 'api-service-pipeline'
         pipeline {
             agent {
               node {
-                // spin up a node.js slave pod to run this build on
-                label 'ose-jenkins-agent-nodejs'
+                label 'rust'
               }
             }
             options {
@@ -202,14 +334,23 @@ spec:
                 stage('preamble') {
                     steps {
                         script {
-                            openshift.withCluster() {
-                                openshift.withProject() {
-                                    echo "Using project: ${openshift.project()}"
-                                }
-                            }
+                           echo "PREAMBLE"
                         }
                     }
                 }
+                
+                stage('clean') {
+                  steps {
+                    script {
+                      openshift.withCluster() {
+                                openshift.withProject() {
+                                  openshift.selector("dc", "api-server").rollout().latest()
+                    }
+                  }
+                }
+              }
+            }
+
                //stage('cleanup') {
                 //    steps {
                 //        script {
